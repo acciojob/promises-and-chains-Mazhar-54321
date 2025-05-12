@@ -7,15 +7,15 @@ document.addEventListener("DOMContentLoaded",function(){
 		const name = document.querySelector("#name").value;
 		console.log(`age:#${age},name:${name}`);
 		if(age<=0 || !name.length){
-			alert("Please enter valid details.");
+			alert("Please enter valid details");
 			return;
 		}
 		let promise=new Promise((resolve,reject)=>{
 			setTimeout(()=>{
 				if(age>18){
-					resolve("Welcome, . You can vote.")
+					resolve(`Welcome, ${name}. You can vote.`)
 				}else{
-					reject("Oh sorry . You aren't old enough.")
+					reject(`Oh sorry ${name}. You aren't old enough.`)
 				} 
 			},4000)
 		})
